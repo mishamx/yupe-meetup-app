@@ -44,5 +44,21 @@ services:
     volumes:
     - appassets:/var/www/web/assets
 
+  sut:
+    build: .
+    environment:
+      DB_TYPE: mysql
+      DB_HOST: db
+      DB_PORT: $MYSQL_PORT
+      DB_NAME: $MYSQL_DATABASE
+      DB_USER: $MYSQL_USER
+      DB_PASSWORD: $MYSQL_PASSWORD
+      DB_CHARSET: 'utf8'
+      DB_TABLE_PREFIX: ''
+    volumes:
+     - ./:/var/www/
+    command: ./runtest.sh
+
+
 volumes:
   appassets:
