@@ -11,11 +11,13 @@ RUN apt-get update \
             mysql-client \
     && rm -r /var/lib/apt/lists/*
 
+WORKDIR /var/www/
+
 COPY ./composer.json /var/www/composer.json
 COPY ./composer.lock /var/www/composer.lock
 RUN composer install --no-progress --ignore-platform-reqs --prefer-dist --profile --optimize-autoloader
 
 COPY . /var/www
 
-WORKDIR /var/www/web/
+
 
