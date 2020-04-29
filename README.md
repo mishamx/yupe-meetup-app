@@ -1,5 +1,5 @@
-# yupe-meetup-app
-Yupe MeetUp 2020.04.29
+# Yupe MeetUp 2020.04.29
+
 
 # Requirements
 
