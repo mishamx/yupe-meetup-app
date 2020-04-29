@@ -15,7 +15,7 @@ function migrate_up {
 
 logger "Wait MySQL server"
 echo "Waiting for MySQL"
-until mysql -h $DB_HOST -P $DB_PORT -u $DB_USER_NAME -p$DB_USER_PASSWORD &> /dev/null
+until mysql -h $DB_HOST -P $DB_PORT -u $DB_USER -p$DB_PASSWORD -e ";" &> /dev/null
 do
   printf "."
   sleep 1
