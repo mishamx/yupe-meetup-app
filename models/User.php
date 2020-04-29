@@ -65,9 +65,12 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      */
     public function validateAuthKey($authKey)
     {
-        return $authKey === $this->auth_key
+        return $authKey === $this->auth_key;
     }
 
+    /**
+     * @return string
+     */
     public function getAuthKey()
     {
         return $this->auth_key;
