@@ -19,5 +19,3 @@ RUN composer install --no-progress --ignore-platform-reqs --prefer-dist --profil
 
 COPY . /var/www
 
-
-
