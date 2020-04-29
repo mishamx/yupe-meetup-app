@@ -9,6 +9,7 @@ services:
       - back
     volumes:
       - appassets:/var/www/web/assets:rw
+      - ./:/var/www/
     environment:
       DB_TYPE: mysql
       DB_HOST: db
