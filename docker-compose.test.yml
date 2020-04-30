@@ -11,7 +11,6 @@ services:
       - back
     volumes:
       - appassets:/var/www/web/assets:rw
-      - ./:/var/www/
     environment:
       DB_CHARSET: utf8
       DB_HOST: db
@@ -59,8 +58,6 @@ services:
       DB_TABLE_PREFIX: ''
       DB_TYPE: mysql
       DB_USER: web
-    volumes:
-     - ./:/var/www/
     command: ./runtest.sh
     networks:
       - back
